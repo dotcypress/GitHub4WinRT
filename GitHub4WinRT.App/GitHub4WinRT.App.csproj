@@ -103,6 +103,10 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Controls\AuthControl.xaml.cs">
+      <DependentUpon>AuthControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Converters\ObjectToVisibilityConverter.cs" />
     <Compile Include="Core\Models\UserInfo.cs" />
     <Compile Include="Core\Network\GitHubService.cs" />
     <Compile Include="Core\Network\IGitHubService.cs" />
@@ -140,6 +144,10 @@
     <Page Include="Assets\StandardStyles.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\AuthControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\HelpPage.xaml">
       <Generator>MSBuild:Compile</Generator>

@@ -9,8 +9,8 @@ namespace GitHub4WinRT.App.Core.Network
 {
     public interface IGitHubService
     {
-        Task<UserInfo> GetUserInfo();
         bool IsLoggedIn { get; }
+        Task<UserInfo> GetUserInfo();
         Task<bool> Authenicate();
     }
 }

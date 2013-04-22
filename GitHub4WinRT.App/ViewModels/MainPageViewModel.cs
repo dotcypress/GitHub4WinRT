@@ -1,6 +1,5 @@
 ﻿#region
 
-using System.Threading.Tasks;
 using GitHub4WinRT.App.Core;
 using GitHub4WinRT.App.Core.Models;
 using GitHub4WinRT.App.Core.Network;
