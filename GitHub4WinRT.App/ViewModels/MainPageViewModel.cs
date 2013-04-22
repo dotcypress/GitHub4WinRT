@@ -2,6 +2,7 @@
 
 using System.Threading.Tasks;
 using GitHub4WinRT.App.Core;
+using GitHub4WinRT.App.Core.Models;
 using GitHub4WinRT.App.Core.Network;
 using GitHub4WinRT.App.Views;
 using Tumbaga.Commands;
@@ -15,7 +16,7 @@ namespace GitHub4WinRT.App.ViewModels
 {
     public class MainPageViewModel : ViewModel
     {
-        private string _avatarUrl;
+        private UserInfo _currentUser;
 
         [Inject]
         public NavigateCommand<HelpPage> OpenAboutCommand { get; set; }
@@ -26,10 +27,10 @@ namespace GitHub4WinRT.App.ViewModels
         [Inject]
         public IGitHubService GitHubService { get; set; }
 
-        public string AvatarUrl
+        public UserInfo CurrentUser
         {
-            get { return _avatarUrl; }
-            set { SetProperty(ref _avatarUrl, value); }
+            get { return _currentUser; }
+            set { SetProperty(ref _currentUser, value); }
         }
 
         protected override async void OnLoad()
@@ -39,9 +40,7 @@ namespace GitHub4WinRT.App.ViewModels
             {
                 await GitHubService.Authenicate();
             }
-            var userInfo = await GitHubService.GetUserInfo();
-            AvatarUrl = userInfo.AvatarUrl;
-            Logger.Trace(userInfo.Login);
+            CurrentUser = await GitHubService.GetUserInfo();
         }
     }
 }

@@ -13,12 +13,13 @@
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
             <Button x:Name="BackButton" Style="{StaticResource BackButtonStyle}" IsEnabled="false" />
-            <TextBlock x:Name="PageTitle" Grid.Column="1" Text="GitHub" Style="{StaticResource PageHeaderTextStyle}" />
+            <Image x:Name="PageTitle" Grid.Column="1" Source="../Assets/Header.png" Stretch="None" HorizontalAlignment="Left" />
         </Grid>
 
-        <Grid x:Name="Main" Grid.Row="1" Margin="120,0,0,0">
-            <Image Source="{Binding AvatarUrl}" Stretch="None" />
-        </Grid>
+        <StackPanel x:Name="Main" Grid.Row="1" Margin="120,0,0,0">
+            <TextBlock Text="{Binding Path=CurrentUser.Login}" Style="{StaticResource PageSubheaderTextStyle}" />
+            <Image Source="{Binding Path=CurrentUser.AvatarUrl}" Stretch="None" />
+        </StackPanel>
 
         <VisualStateManager.VisualStateGroups>
             <VisualStateGroup x:Name="ApplicationViewStates">
@@ -37,7 +38,7 @@
                             <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource SnappedBackButtonStyle}" />
                         </ObjectAnimationUsingKeyFrames>
                         <ObjectAnimationUsingKeyFrames Storyboard.TargetName="PageTitle" Storyboard.TargetProperty="Style">
-                            <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource SnappedPageHeaderTextStyle}" />
+                            <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource SnappedPageHeaderStyle}" />
                         </ObjectAnimationUsingKeyFrames>
                         <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Main" Storyboard.TargetProperty="Margin">
                             <DiscreteObjectKeyFrame KeyTime="0" Value="20,0,0,0" />

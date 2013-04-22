@@ -15,9 +15,9 @@
   </Resources>
   <Applications>
     <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="GitHub4WinRT.App.App">
-      <VisualElements DisplayName="GitHub4WinRT.App" Logo="Assets\Logo.png" SmallLogo="Assets\SmallLogo.png" Description="GitHub client" ForegroundText="light" BackgroundColor="#464646">
-        <DefaultTile ShowName="allLogos" />
-        <SplashScreen Image="Assets\SplashScreen.png" />
+      <VisualElements DisplayName="GitHub" Logo="Assets\Logo.png" SmallLogo="Assets\SmallLogo.png" Description="GitHub client" ForegroundText="light" BackgroundColor="#BFD2FF">
+        <DefaultTile ShowName="wideLogoOnly" />
+        <SplashScreen Image="Assets\SplashScreen.png" BackgroundColor="#BFD2FF" />
       </VisualElements>
     </Application>
   </Applications>
