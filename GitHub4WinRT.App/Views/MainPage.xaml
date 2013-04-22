@@ -18,7 +18,7 @@
         </Grid>
 
         <Grid x:Name="Main" Grid.Row="1" Margin="120,0,0,0">
-            <controls:AuthControl x:Name="AuthControl" Grid.Column="2" DataContext="{Binding CurrentUser}" VerticalAlignment="Top" Margin="0,-90,0,0" HorizontalAlignment="Right" />
+            <controls:AuthControl x:Name="AuthControl" Grid.Column="2" DataContext="{Binding CurrentUser}" VerticalAlignment="Top" Margin="0,-96,0,0" HorizontalAlignment="Right" />
         </Grid>
 
         <VisualStateManager.VisualStateGroups>
@@ -46,8 +46,8 @@
                         <ObjectAnimationUsingKeyFrames Storyboard.TargetName="AuthControl" Storyboard.TargetProperty="Margin">
                             <DiscreteObjectKeyFrame KeyTime="0" Value="0,0,0,0" />
                         </ObjectAnimationUsingKeyFrames>
-                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="AuthControl" Storyboard.TargetProperty="HorizontalAlignment">
-                            <DiscreteObjectKeyFrame KeyTime="0" Value="Left" />
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="AuthControl" Storyboard.TargetProperty="Visibility">
+                            <DiscreteObjectKeyFrame KeyTime="0" Value="Collapsed" />
                         </ObjectAnimationUsingKeyFrames>
                     </Storyboard>
                 </VisualState>
